@@ -75,6 +75,29 @@ if ($_SESSION['hash_master'] == NULL) {
                             <p>Dashboard</p>
                         </a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">money</i>
+                            Finance
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Extract</a>
+                            <a class="dropdown-item" href="#">+ Withdraw</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">money</i>
+                            Finance
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Extract</a>
+                            <a class="dropdown-item" href="#">+ Withdraw</a>
+                        </div>
+                    </li>
                     <li class="nav-item  <?php if ($active == 'transaction') {
                                                 echo "active";
                                             } ?>  ">

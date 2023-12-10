@@ -1,0 +1,9 @@
+[10-Dec-2023 18:21:31 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php:48
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(48): PDOStatement->execute()
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(40): App\sts\Models\helper\StsRead->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/DbDashboard.php(35): App\sts\Models\helper\StsRead->fullRead('SELECT * FROM `...')
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Dashboard.php(30): App\sts\Models\DbDashboard->getDataDashboard()
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Dashboard->getData()
+#5 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#6 /Users/emersonro in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php on line 48
