@@ -1,0 +1,26 @@
+{
+  "name": "vendorname/ttpix",
+  "description": "TtyPix",
+  "authors": [
+    {
+      "name": "I Like Technology",
+      "email": "tecnologia@iliketechnology.com.br"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Core\\": "core",
+      "Sts\\": "app/sts",
+      "App\\": "app"
+    }
+  },
+  "require": {
+    "vlucas/valitron": "^1.4",
+    "phpmailer/phpmailer": "^6.7",
+    "codenix-sv/coingecko-api": "^1.0",
+    "samayo/bulletproof": "^4.0",
+    "telegram-bot/api": "^2.3",
+    "chillerlan/php-qrcode": "^3.4",
+    "firebase/php-jwt": "^6.9"
+  }
+}
