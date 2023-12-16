@@ -6077,7 +6077,7 @@ img {
   /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  background: linear-gradient(165deg, rgb(80 79 3 / 60%), rgb(13 23 4))
   /* Standard syntax */
 }
 

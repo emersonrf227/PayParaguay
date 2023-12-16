@@ -25,7 +25,6 @@ class Dashboard
     {
         $val =  new \App\sts\Models\GetHeader();
         $this->DataToken = $val->validatyToken();
-
         $dashboard  = new \App\sts\Models\DbDashboard();
         return $dashboard->getDataDashboard();
     }

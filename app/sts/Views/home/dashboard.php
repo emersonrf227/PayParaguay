@@ -5,7 +5,8 @@ $f = new \App\sts\Models\helper\StsFormat();
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="display:flex; flex-direction:row; justify-content:center;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                style="display:flex; flex-direction:row; justify-content:center;">
                 <a href=""><i class="material-icons text-warning" onclick="load()">autorenew</i></a>
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -75,27 +76,27 @@ $f = new \App\sts\Models\helper\StsFormat();
 </div>
 
 <script>
-    window.onload = async (event) => {
-        load();
-    }
+window.onload = async (event) => {
+    load();
+}
 
-    async function load() {
+async function load() {
 
+    debugger
+    $(".loader").show('slow').fadeIn();
+    try {
 
-        $(".loader").show('slow').fadeIn();
-        try {
-
-            const token = await validatyToken()
-            const response = await smartGateway.get('dashboard/get-data', token);
-            if (response.data.error === 0) {
-                $(".loader").hide('slow').fadeOut();
-                const qtyUsers = response.data.res.total_users.length;
-                const balancePlg = maskCurrency(response.data.res.hot_balance);
-                const totalSumOrders = maskCurrency(response.data.res.total_sum_orders.amount_brl);
-                const transactions = response.data.res.transactions;
-                $('#listTransactions').html('');
-                transactions.map((item, key) => {
-                    $('#listTransactions').append(`
+        const token = await validatyToken()
+        const response = await smartGateway.get('dashboard/get-data', token);
+        if (response.data.error === 0) {
+            $(".loader").hide('slow').fadeOut();
+            const qtyUsers = response.data.res.total_users.length;
+            const balancePlg = maskCurrency(response.data.res.balance);
+            const totalSumOrders = maskCurrency(response.data.res.total_sum_orders.amount_brl);
+            const transactions = response.data.res.transactions;
+            $('#listTransactions').html('');
+            transactions.map((item, key) => {
+                $('#listTransactions').append(`
                     <tr>
                         <td style="color:#ff3b00;">${key + 1}</td>
                         <td>${item.name}</td>
@@ -104,13 +105,14 @@ $f = new \App\sts\Models\helper\StsFormat();
                         <td>${item.addressWallet}</td>
                     </tr>
                 `);
-                })
-                $('#balancePlg').html(balancePlg);
-                $('#qtyUsers').html(qtyUsers);
-                $('#totalSumOrders').html(totalSumOrders);
-            }
-        } catch (error) {
-            $(".loader").hide('slow').fadeOut();
+            })
+            $('#balancePlg').html(balancePlg);
+            $('#qtyUsers').html(qtyUsers);
+            $('#totalSumOrders').html(totalSumOrders);
         }
+    } catch (error) {
+
+        $(".loader").hide('slow').fadeOut();
     }
+}
 </script>
