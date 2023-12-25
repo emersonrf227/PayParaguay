@@ -15,12 +15,12 @@ class Login
 
 
 
-  public function newToken()
-  {
-    $this->Dados['SendLogin'] = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-    $login = new \App\sts\Models\ValidaLogin();
-    return $login->newToken($this->Dados['SendLogin'], 20);
-  }
+  // public function newToken()
+  // {
+  //   $this->Dados['SendLogin'] = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+  //   $login = new \App\sts\Models\ValidaLogin();
+  //   return $login->newToken($this->Dados['SendLogin'], 20);
+  // }
 
 
   public function acesso()

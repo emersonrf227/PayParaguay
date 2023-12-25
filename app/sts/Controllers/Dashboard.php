@@ -16,10 +16,11 @@ class Dashboard
     private $Dados;
     private $DataToken;
 
-
-    function __construct()
-    {
-    }
+    // function __construct()
+    // {
+    //     $val =  new \App\sts\Models\GetHeader();
+    //     $this->DataToken = $val->validatyToken();
+    // }
 
     public function getData()
     {
@@ -28,8 +29,6 @@ class Dashboard
         $dashboard  = new \App\sts\Models\DbDashboard();
         return $dashboard->getDataDashboard();
     }
-
-
 
     public function index()
     {

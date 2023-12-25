@@ -20,7 +20,6 @@ class DbDashboard
         $dataf = date('Y-m-t 23:59:39');
 
         $users->fullRead("SELECT * FROM `users` where active = 1");
-
         $totalOrders->fullRead("SELECT sum(amount) as amount FROM `invoice` where status = 'COMPLETED' and createdAt  between '$datai' and   '$dataf'");
         $transaction->fullRead("SELECT * FROM `invoice` where status = 'COMPLETED'   order by id desc  limit 10 ");
         $balance->fullRead("SELECT * FROM `transactions` order by id desc  limit 1");
@@ -32,9 +31,9 @@ class DbDashboard
             'msg' => 'Uploaded Successfully!',
             'res' => array(
                 "total_users" =>  $users->getResultado(),
-                "total_sum_orders" => $totalOrders->getResultado()[0] !== null ? $totalOrders->getResultado()[0] : 0.00,
+                "total_sum_orders" => $totalOrders->getResultado()[0]['amount'] !== null ? 0.00 : $totalOrders->getResultado()[0]['amount'],
                 "transactions" =>  $transaction->getResultado(),
-                "balance" => $totalOrders->getResultado()[0] !== null ? $totalOrders->getResultado()[0] : 0.00,
+                "balance" => $balance->getResultado() !== null ?  0.00 :  $totalOrders->getResultado()[0],
             )
         );
         echo json_encode($display, true);

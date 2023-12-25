@@ -35,14 +35,14 @@ class UsersModels
         $f = new \App\sts\Models\helper\StsFormat();
 
         if ($_POST['forceReset'] == '*') {
-            $hashpwd = password_hash(102030, PASSWORD_DEFAULT);
+            $uuidpwd = password_uuid(102030, PASSWORD_DEFAULT);
 
             $data['account'] = array(
                 "name" =>  utf8_decode(ucwords(addslashes($_POST['name']))),
                 "username" =>  utf8_decode(addslashes($_POST['username'])),
                 "active" => addslashes($_POST['active']),
                 "forceReset" => addslashes($_POST['forceReset']),
-                "password" => $hashpwd,
+                "password" => $uuidpwd,
                 "updateAt" => date('Y-m-d H:i:s')
             );
         } else {
@@ -55,10 +55,10 @@ class UsersModels
             );
         }
 
-        $hash = addslashes($_POST['hash']);
+        $uuid = addslashes($_POST['uuid']);
 
         $update = new \App\sts\Models\helper\StsUpdate();
-        $update->exeUpdate("account",  $data['account'],  "WHERE hash = '$hash'");
+        $update->exeUpdate("account",  $data['account'],  "WHERE uuid = '$uuid'");
         if ($update->sqlResult()['data']['status'] === 'success') {
             $display = array(
                 "error" => 0,
@@ -78,11 +78,11 @@ class UsersModels
     }
 
 
-    public function viewUsers($hash)
+    public function viewUsers($uuid)
     {
         //nft select 
         $account = new \App\sts\Models\helper\StsRead();
-        $account->fullRead("SELECT * FROM `account` where hash = '$hash' ");
+        $account->fullRead("SELECT * FROM `account` where uuid = '$uuid' ");
         return  $account->getResultado()[0];
     }
 
@@ -102,13 +102,13 @@ class UsersModels
         }
 
 
-        $hashpwd = password_hash(addslashes($_POST['password']), PASSWORD_DEFAULT);
+        $uuidpwd = password_uuid(addslashes($_POST['password']), PASSWORD_DEFAULT);
         $uuid = $f->gen_uuid();
         $data['account'] = array(
-            "hash" => $uuid,
+            "uuid" => $uuid,
             "username" =>  utf8_decode(addslashes($_POST['username'])),
             "name" =>  utf8_decode(ucwords(addslashes($_POST['name']))),
-            "password" =>  $hashpwd,
+            "password" =>  $uuidpwd,
             "active" => 1,
             "createdAt" => date('Y-m- H:i:s')
         );

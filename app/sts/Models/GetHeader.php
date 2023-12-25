@@ -20,6 +20,7 @@ class GetHeader
     function validatyToken()
     {
 
+
         // Verifica se o cabeçalho "Authorization" está presente na requisição
         if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
             // Pega o valor do cabeçalho "Authorization"

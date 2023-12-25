@@ -56,142 +56,16 @@
 </div>
 <!--  End Modal -->
 
-<!-- Sart Modal 2 -->
-<div class="modal fade modalPage" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header justify-content-center">
-                <button type="button" class="close" onclick="closeModal()" aria-hidden="true">
-                    <i class="now-ui-icons ui-1_simple-remove"></i>
-                </button>
-                <h4 class="title title-up">
-                    <center>Escaneie o QR Code abaixo para efetuar a transação:</center>
-                </h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-12">
-                        <center>
-                            <h3 class="card-title"><strong>VALOR: </strong>R$<span id="amountBrl"></span></h3>
-                        </center>
-                    </div>
-
-                    <div class="col-sm-12 col-lg-12">
-                        <center>
-                            <h3 class="card-title"><strong>QR CODE</strong></h3>
-                        </center>
-                        <div class="form-group" id="imgpix" style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                            <!-- <img class="n-logo" src="<?php echo URL;; ?>assets/img/qrcode.png" style="width:40%;"> -->
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 col-lg-12">
-                        <center>
-                            <h3 class="card-title"><strong>CHAVE PIX</strong></h3>
-                        </center>
-                        <div class="form-group">
-                            <input type="text" id="codpix" value="" class="form-control" disabled />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary btn-round btn-lg" id="btncopypix">Copiar Chave
-                    Pix</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!--  End Modal 2-->
-
-<!-- Sart Modal Success-->
-<div class="modal fade modalPage" id="ModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header justify-content-center">
-                <button type="button" class="close" onclick="closeModal()" aria-hidden="true">
-                    <i class="now-ui-icons ui-1_simple-remove"></i>
-                </button>
-                <h4 class="title title-up">
-                    <center>Efetuado com sucesso!</center>
-                </h4>
-            </div>
-            <center>
-                <div class="modal-body">
-
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="form-group">
-                                <center><img src="<?php echo URL ?>/assets/img/success.png" width="100px" style="text-align: center; padding: 15px;"></center>
-                                <center><img src="<?php echo URL ?>/assets/img/LinhasAtivo1.png" width="200px" style="text-align: center; padding: 15px;"></center>
-
-                            </div>
-                            <center>
-                                <h6> Detalhes da transação</h6>
-                            </center>
-
-                            <center>
-                                <h6> <i class="now-ui-icons tech_watch-time"></i> <small id='recTimer'> </small></h6>
-                            </center>
 
 
 
-                            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-                                <p> Blockchain Txid: </p>
-                                <small id='recTxid'> </small>
-                            </div>
-                            <div style="display: flex;flex-direction: row;justify-content: space-between; ">
-                                <p> Valor: </p>
-                                <p id='recValue'> </p>
-                            </div>
-                            <div style="display: flex;flex-direction: row;justify-content: space-between; ">
-                                <p> Cotação: </p>
-                                <p id='recCotacao'> </p>
-                            </div>
-                            <div style="display: flex;flex-direction: row;justify-content: space-between; ">
-                                <p> Qtd USDT: </p>
-                                <p id='sendUsdt'> </p>
-                            </div>
-
-                            <center>
-                                <h6> Destinatário:</h6>
-                            </center>
-
-                            <div style="display: flex;flex-direction: row;justify-content: space-between; ">
-                                <p id='sendFrom'> </p>
-                            </div>
-
-                            <center>
-                                <h6> Beneficiário:</h6>
-                                <p id='sendTo'> </p>
-
-                            </center>
-
-                            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-                                <p> BilletId: </p>
-                                <p id='billetId'> </p>
-                            </div>
-
-                            <p> Suporte </p>
-                            <p> support@smartgateway.io</p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </center>
-
-        </div>
-    </div>
-</div>
-<!--  End Modal Success-->
 
 <footer class="footer" data-background-color="black">
     <div class=" container ">
         <nav>
             <?php
-            if ($this->changeRdp){
-            echo "
+            if ($this->changeRdp) {
+                echo "
             <ul>
                 <li>SMART GATEWAY</li>
                 <br>

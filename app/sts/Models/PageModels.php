@@ -222,7 +222,7 @@ class PageModels
             if ($return["status"] == 'ok') {
                 $uuid = $f->gen_uuid();
                 $data['order'] = array(
-                    "hash" => $uuid,
+                    "uuid" => $uuid,
                     "emv" => $return['data']['emv'],
                     "address" => $return['data']['address'],
                     "txid" => $return['data']['txid'],

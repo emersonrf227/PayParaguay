@@ -133,3 +133,146 @@ Stack trace:
 # in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php on line 48
 [15-Dec-2023 01:20:54 America/Sao_Paulo] PHP Notice:  Undefined index: balance in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/DbDashboard.php on line 37
 [15-Dec-2023 01:21:42 America/Sao_Paulo] PHP Notice:  Undefined offset: 0 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/DbDashboard.php on line 37
+[17-Dec-2023 11:01:18 America/Sao_Paulo] PHP Notice:  Undefined offset: 0 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/DbDashboard.php on line 37
+[18-Dec-2023 09:54:19 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'exit' (T_EXIT) in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/GetHeader.php on line 23
+[18-Dec-2023 09:54:29 America/Sao_Paulo] PHP Notice:  Undefined index: HTTP_AUTHORIZATION in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/GetHeader.php on line 22
+[24-Dec-2023 00:22:46 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method App\sts\Models\InvoiceModels::createInvoice() in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php:38
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#3 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 38
+[24-Dec-2023 00:34:06 America/Sao_Paulo] PHP Notice:  Undefined variable: http_response_header in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 36
+[24-Dec-2023 11:29:44 America/Sao_Paulo] PHP Notice:  Undefined variable: http_response_header in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 36
+[24-Dec-2023 11:32:35 America/Sao_Paulo] PHP Notice:  Undefined variable: http_response_header in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 39
+[24-Dec-2023 14:39:32 America/Sao_Paulo] PHP Notice:  Undefined variable: jsonPayload in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 38
+[24-Dec-2023 14:43:19 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 40
+[24-Dec-2023 14:43:26 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 40
+[24-Dec-2023 14:43:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 40
+[24-Dec-2023 14:44:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php on line 40
+[24-Dec-2023 18:13:56 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''authentication' as a 
+		inner join account as b on a.id = b.authenticationId...' at line 1 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php:48
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(48): PDOStatement->execute()
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(40): App\sts\Models\helper\StsRead->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsGetLogged.php(25): App\sts\Models\helper\StsRead->fullRead('SELECT * from '...')
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php(25): App\sts\Models\helper\StsGetLogged->getLogged('a7de10a0-946b-4...')
+#4 /Users/emersonrodrigues in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php on line 48
+[24-Dec-2023 18:18:04 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''authentication' as a 
+		inner join account as b on a.id = b.authenticationId...' at line 1 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php:48
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(48): PDOStatement->execute()
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(40): App\sts\Models\helper\StsRead->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsGetLogged.php(25): App\sts\Models\helper\StsRead->fullRead('SELECT * from '...')
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php(25): App\sts\Models\helper\StsGetLogged->getLogged('a7de10a0-946b-4...')
+#4 /Users/emersonrodrigues in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php on line 48
+[24-Dec-2023 18:40:06 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Cannot use object of type App\sts\Models\helper\StsGetLogged as array in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php:28
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#4 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 28
+[25-Dec-2023 12:07:16 America/Sao_Paulo] PHP Notice:  Undefined variable: hash in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/ValidaLogin.php on line 96
+[25-Dec-2023 12:08:39 America/Sao_Paulo] PHP Notice:  Undefined offset: 0 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsGetLogged.php on line 26
+[25-Dec-2023 12:08:39 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Cannot use object of type App\sts\Models\helper\StsGetLogged as array in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php:28
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#4 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 28
+[25-Dec-2023 12:13:03 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as authUuid, * FROM authentication as a 
+            inner join users as b on...' at line 1 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php:48
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(48): PDOStatement->execute()
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(40): App\sts\Models\helper\StsRead->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/ValidaLogin.php(41): App\sts\Models\helper\StsRead->fullRead('SELECT a.uuid, ...')
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Login.php(55): App\sts\Models\ValidaLogin->acesso(Array)
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/Co in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php on line 48
+[25-Dec-2023 12:13:23 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM authentication as a 
+            inner join users as b on a.id = b.aut...' at line 1 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php:48
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(48): PDOStatement->execute()
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(40): App\sts\Models\helper\StsRead->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/ValidaLogin.php(41): App\sts\Models\helper\StsRead->fullRead('SELECT a.uuid a...')
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Login.php(55): App\sts\Models\ValidaLogin->acesso(Array)
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/Co in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php on line 48
+[25-Dec-2023 12:13:47 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM authentication as a 
+            inner join users as b on a.id = b.aut...' at line 1 in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php:48
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(48): PDOStatement->execute()
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php(40): App\sts\Models\helper\StsRead->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/ValidaLogin.php(41): App\sts\Models\helper\StsRead->fullRead('SELECT a.uuid a...')
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Login.php(55): App\sts\Models\ValidaLogin->acesso(Array)
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/Co in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsRead.php on line 48
+[25-Dec-2023 12:16:05 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Cannot use object of type App\sts\Models\helper\StsGetLogged as array in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php:28
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#4 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 28
+[25-Dec-2023 12:16:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Cannot use object of type App\sts\Models\helper\StsGetLogged as array in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php:28
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#4 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 28
+[25-Dec-2023 12:17:01 America/Sao_Paulo] PHP Notice:  Undefined variable: json in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 39
+[25-Dec-2023 12:28:53 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Object of class App\sts\Models\helper\StsCurl could not be converted to string in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php:40
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#4 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 40
+[25-Dec-2023 12:43:48 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 44
+[25-Dec-2023 13:27:45 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'emv' cannot be null in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php:34
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php(34): PDOStatement->execute(Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php(20): App\sts\Models\helper\StsCreate->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php(56): App\sts\Models\helper\StsCreate->exeCreate('invoice', Array)
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#5 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\Config in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php on line 34
+[25-Dec-2023 13:53:14 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'emv' cannot be null in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php:34
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php(34): PDOStatement->execute(Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php(20): App\sts\Models\helper\StsCreate->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php(59): App\sts\Models\helper\StsCreate->exeCreate('invoice', Array)
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#5 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\Config in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php on line 34
+[25-Dec-2023 14:09:16 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 64 and defined in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/vendor/chillerlan/php-qrcode/src/QRCode.php:124
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php(64): chillerlan\QRCode\QRCode->render(NULL)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#5 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/vendor/chillerlan/php-qrcode/src/QRCode.php on line 124
+[25-Dec-2023 14:11:29 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php:34
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php(34): PDOStatement->execute(Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php(20): App\sts\Models\helper\StsCreate->exeInstrucao()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php(67): App\sts\Models\helper\StsCreate->exeCreate('invoice', Array)
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#4 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#5 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->c in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/helper/StsCreate.php on line 34
+[25-Dec-2023 14:11:52 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Cannot pass parameter 1 by reference in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php:65
+Stack trace:
+#0 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Controllers/Invoice.php(39): App\sts\Models\InvoiceModels->createNewInvoice(Array, Array)
+#1 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(104): App\sts\Controllers\Invoice->createInvoice()
+#2 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/core/ConfigController.php(88): Core\ConfigController->carregarMetodo()
+#3 /Users/emersonrodrigues/Documents/GitHub/PayParaguay/index.php(11): Core\ConfigController->carregar()
+#4 {main}
+  thrown in /Users/emersonrodrigues/Documents/GitHub/PayParaguay/app/sts/Models/InvoiceModels.php on line 65

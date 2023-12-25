@@ -82,7 +82,6 @@ window.onload = async (event) => {
 
 async function load() {
 
-    debugger
     $(".loader").show('slow').fadeIn();
     try {
 
@@ -92,7 +91,7 @@ async function load() {
             $(".loader").hide('slow').fadeOut();
             const qtyUsers = response.data.res.total_users.length;
             const balancePlg = maskCurrency(response.data.res.balance);
-            const totalSumOrders = maskCurrency(response.data.res.total_sum_orders.amount_brl);
+            const totalSumOrders = maskCurrency(response.data.res.total_sum_orders);
             const transactions = response.data.res.transactions;
             $('#listTransactions').html('');
             transactions.map((item, key) => {

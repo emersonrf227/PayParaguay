@@ -36,9 +36,10 @@ class ValidaLogin
 
             $login = $f->removerAcentos($f->htmlspecialchars_recursive($this->Dados['form_login']["login"]));
             $validaLogin = new \App\sts\Models\helper\StsRead();
-            $validaLogin->fullRead("SELECT * FROM authentication as a 
-            inner join users as b on a.id = b.authenticationId 
-            where username = '$login'");
+            $validaLogin->fullRead("SELECT a.uuid as authentication_uuid, a.*, b.* 
+            FROM authentication as a 
+            INNER JOIN users as b ON a.id = b.authenticationId 
+            WHERE username = '$login'");
             $this->Resultado = $validaLogin->getResultado();
             $this->Dados['listuser'] = $validaLogin->getResultado();
             if (!empty($this->Resultado)) {
@@ -93,7 +94,7 @@ class ValidaLogin
             $data = [
                 'iat' => $issuedAt,
                 'exp' => $expirationTime,
-                'uuid' => $hash,
+                'uuid' => $authentication_uuid,
                 'username' => $name,
                 'super' => $superAdmin,
                 'forceReset' => $forceReset,

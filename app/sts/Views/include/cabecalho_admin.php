@@ -31,11 +31,9 @@ if ($_SESSION['hash_master'] == NULL) {
     <title>
         Admin - Smart Gateway
     </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-        name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
@@ -43,10 +41,8 @@ if ($_SESSION['hash_master'] == NULL) {
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<div class="loader"
-    style="display: block; position: fixed; top: 0px; left: 0px; z-index: 99999; background-color: rgb(0, 0, 0); width: 100%; height: 100%; opacity: 0.9; justify-content: center;">
-    <div
-        style=" width: 100%; height:  100%;background: #FFF ;display: flex;flex-direction: row;justify-content: center;align-items: center;">
+<div class="loader" style="display: block; position: fixed; top: 0px; left: 0px; z-index: 99999; background-color: rgb(0, 0, 0); width: 100%; height: 100%; opacity: 0.9; justify-content: center;">
+    <div style=" width: 100%; height:  100%;background: #FFF ;display: flex;flex-direction: row;justify-content: center;align-items: center;">
         <div>
             <img src="<?php echo URL ?>assets/img/LinhasAtivo1.png" style="width:300px;">
             <center>
@@ -76,20 +72,17 @@ if ($_SESSION['hash_master'] == NULL) {
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons">money</i>
-                            Finance
+                            Sell
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Extract</a>
-                            <a class="dropdown-item" href="#">+ Withdraw</a>
+                            <a class="dropdown-item" href="#">+ Invoice</a>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons">money</i>
                             Finance
                         </a>
@@ -130,8 +123,7 @@ if ($_SESSION['hash_master'] == NULL) {
                     <div class="navbar-wrapper">
                         <a class="navbar-brand" href="javascript:void(0)"><?php echo $title ?></a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-                        aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon icon-bar"></span>
                         <span class="navbar-toggler-icon icon-bar"></span>

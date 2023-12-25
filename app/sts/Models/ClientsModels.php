@@ -104,7 +104,7 @@ class ClientsModels
         $hashpwd = password_hash(addslashes($_POST['password']), PASSWORD_DEFAULT);
         $uuid = $f->gen_uuid();
         $data['account'] = array(
-            "hash" => $uuid,
+            "uuid" => $uuid,
             "username" =>  utf8_decode(addslashes($_POST['username'])),
             "name" =>  utf8_decode(ucwords(addslashes($_POST['name']))),
             "password" =>  $hashpwd,

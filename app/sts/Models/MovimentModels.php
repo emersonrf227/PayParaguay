@@ -121,7 +121,7 @@ class MovimentModels
         $orderId->fullRead("SELECT a.id as orderId, b.id as userId, c.id as walletId, a.*, b.*, c.* FROM `ordem` as a 
         inner join users as b on a.userId = b.id  
         inner join wallets as c on b.id = c.userId  
-        WHERE `hash` = '{$data['message']}' limit 1");
+        WHERE `uuid` = '{$data['message']}' limit 1");
         if ($orderId->getResultado()) {
 
             extract($orderId->getResultado()[0]);
